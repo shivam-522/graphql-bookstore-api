@@ -1,0 +1,14 @@
+type Book {
+  id: ID
+  title: String
+  author: String
+}
+""" Query: data fetch karne ke liye"""
+type Query {
+  allBooks: [Book]
+  bookById(id: ID!): Book
+}
+"""Mutation: data create/update/delete ke liye"""
+type Mutation {
+  addBook(title: String!, author: String!): Book
+}
